@@ -1,0 +1,55 @@
+<form class="form-horizontal" ng-controller="createCtrl" ng-submit="createPost()">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Create Post</legend>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="input title">Title</label>
+      <div class="col-md-6">
+        <input ng-model="title" id="input title" name="input title" type="text" placeholder="e:g; A day in a life of a common man" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <!-- Multiple Checkboxes -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="status">status</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="status-0">
+          <input ng-model="status" type="radio" name="status" id="status-0" value="public" checked="checked">
+          public
+        </label>
+        <label class="radio-inline" for="status-1">
+          <input ng-model="status" type="radio" name="status" id="status-1" value="private">
+          private
+        </label>
+      </div>
+    </div>
+    <!-- Textarea -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="inputDetail">Details</label>
+      <div class="col-md-4">
+        <textarea ng-model="inputDetail" class="form-control" id="inputDetail" name="inputDetail">Atleast 100 words</textarea>
+      </div>
+    </div>
+
+     <!--File Button -->
+    <!--<div class="form-group">-->
+      <!--<label class="col-md-4 control-label" for="photo">File Upload</label>-->
+      <!--<div class="col-md-4">-->
+        <!--<input ng-model="photo" onChange="angular.element(this).scope().uploadPhoto()" id="photo" name="photo" class="input-file" type="file">-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="submit"></label>
+      <div class="col-md-4">
+        <button id="submit" name="submit" class="btn btn-primary">submit</button>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
